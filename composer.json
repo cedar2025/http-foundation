@@ -1,5 +1,8 @@
 {
-    "name": "symfony/http-foundation",
+    "name": "cedar2025/http-foundation",
+    "replace": {
+        "symfony/http-foundation":"v6.4.*"
+    },
     "type": "library",
     "description": "Defines an object-oriented layer for the HTTP specification",
     "keywords": [],

@@ -1517,7 +1517,8 @@ class Request
         }
 
         if (null === $this->content || false === $this->content) {
-            $this->content = file_get_contents('php://input');
+            $php_input = file_get_contents('php://input');
+            $this->content = empty($php_input) ? json_encode($_POST) : $php_input;
         }
 
         return $this->content;
